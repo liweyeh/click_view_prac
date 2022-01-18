@@ -1,12 +1,12 @@
 const express = require("express");
+const fs = require("fs");
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
-});
+// Define Routes
+app.use("/api/playlist", require("./route/playlist.js"));
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
