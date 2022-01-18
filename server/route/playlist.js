@@ -1,6 +1,5 @@
 const express = require("express");
 const playlistData = require("../data/playlists");
-const video = require("../data/videos.json");
 const router = express.Router();
 
 // @route GET api/playlist
