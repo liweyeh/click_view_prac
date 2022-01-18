@@ -1,0 +1,29 @@
+.nav {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_btn {
+    width: 40vw;
+    text-align: center;
+    background-color: orange;
+    border: 1px solid orange;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 5px;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.nav_btn:first-child {
+    border-radius: 20px 0px 0px 20px;
+    border-right: 1px solid white;
+}
+
+.nav_btn:last-child {
+    border-radius: 0px 20px 20px 0px;
+    border-left: 1px solid white;
+}
