@@ -2,6 +2,7 @@ Hi
 
 Steps to start:
 
+-   Run npm install in both root and client directory
 -   In the root directory, run npm start to start the express server
 -   In the client directory, run npm start to start the UI
 
