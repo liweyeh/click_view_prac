@@ -6,10 +6,32 @@ const PlaylistPage = () => {
     const [playlist, setPlaylist] = useState([]);
 
     useEffect(() => {
-        fetch("/api/playlist")
-            .then((res) => res.json())
-            .then((data) => setPlaylist(data));
+        (async () => {
+            let playlistData = await fetchPlaylist();
+            // playlistData = playlistData.map((dataItem) => {
+            //     const vids = [];
+            //     dataItem.videoIds.forEach(async (vid) => {
+            //         const vidData = await fetchVid(vid);
+            //         vids.push(vidData);
+            //     });
+            //     return { ...dataItem, vids: vids };
+            // });
+
+            setPlaylist(playlistData);
+        })();
     }, []);
+
+    const fetchPlaylist = async () => {
+        const res = await fetch("/api/playlist");
+        const data = await res.json();
+        return data;
+    };
+
+    const fetchVid = async (id) => {
+        const res = await fetch(`/api/video/${id}`);
+        const data = await res.json();
+        return data;
+    };
 
     const createPlaylist = ({ description, id, name, videoIds }) => {
         return (
