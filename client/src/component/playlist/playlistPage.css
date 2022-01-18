@@ -1,0 +1,29 @@
+.playlist {
+    margin-top: 40px;
+    color: orange;
+}
+
+.playlist_item {
+    margin-top: 20px;
+}
+
+.playlist_item_name {
+    margin: 0px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.playlist_item_desc {
+    margin: 0px;
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+.playlist_item_vid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.playlist_item_vid_item {
+}

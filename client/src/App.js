@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Nav from "./component/nav/Nav";
 import Video from "./component/video/VideoPage";
+import Playlist from "./component/playlist/PlaylistPage";
 
 function App() {
     const [page, setPage] = useState("video");
@@ -9,7 +10,7 @@ function App() {
     return (
         <div className="App">
             <Nav setPage={setPage} />
-            {page === "video" ? <Video /> : ""}
+            {page === "video" ? <Video /> : <Playlist />}
         </div>
     );
 }
